@@ -1,4 +1,5 @@
 import React from 'react'
+import 'font-awesome/css/font-awesome.min.css'
 
 const Modal = ({ children, show, close }) => {
   if (!show) return null
@@ -6,8 +7,8 @@ const Modal = ({ children, show, close }) => {
   return (
     <div className="Modal">
       <div className="hijoModal">
+        <i className="fa fa-times" onClick={close} />
         {children}
-        <button className="boton" onClick={close}>Cerrar</button>
       </div>
     </div>
   )

@@ -148,12 +148,12 @@ li{
   font-weight: bold;
 }
 
-li.crearLista{
-  position: absolute;
+.crearLista{
+  position: fixed;
   bottom: 80px;
 }
 
-li.active{
+li.activo{
   border-left: 2px solid white;
   padding-left: 18px;
 }
@@ -173,6 +173,39 @@ li.active{
   width: 100%;
   min-height: 90vh;
   padding: 20px;
+  text-transform: capitalize;
+  overflow-y: scroll;
+  background: radial-gradient(
+    ellipse at left bottom,
+    rgba(17, 27, 75, 0.9) 0%,
+    rgba(38, 20, 72, 0.9) 59%,
+    rgba(22, 24, 47, 1) 100%
+  );
+}
+
+.tituloLista{
+  font-size: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 15px;
+}
+
+table tr:not(:last-of-type) {
+  border-bottom: 1px solid #282828;
+}
+
+table td {
+  padding: 10px 0;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
   background: radial-gradient(
     ellipse at left bottom,
     rgba(17, 27, 75, 0.9) 0%,
@@ -198,7 +231,7 @@ li.active{
   width: 400px;
   background: #211f27;
   border-radius: 4px;
-  padding: 25px;
+  padding: 15px;
 }
 
 .Modal i {
@@ -212,6 +245,7 @@ li.active{
   background-color: #8839d3;
   color: white;
   padding: 12.5px 30px;
+  margin-top: 10px;
   border-radius: 25px;
   text-transform: uppercase;
   font-weight: bold;
@@ -252,23 +286,27 @@ input {
   padding: 25px;
   text-align: center;
 }
-  @-webkit-keyframes toast {
-    0% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-    100% {
-      -webkit-transform: translateY(75px);
-      transform: translateY(75px);
-    }
+@-webkit-keyframes toast {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
-  @keyframes toast {
-    0% {
-      -webkit-transform: translateY(0px);
-      transform: translateY(0px);
-    }
-    100% {
-      -webkit-transform: translateY(75px);
-      transform: translateY(75px);
-    }
+  100% {
+    -webkit-transform: translateY(75px);
+    transform: translateY(75px);
   }
+}
+@keyframes toast {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(75px);
+    transform: translateY(75px);
+  }
+}
+
+i{
+  cursor: pointer;
+}

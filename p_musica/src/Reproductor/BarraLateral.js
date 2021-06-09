@@ -1,32 +1,34 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useContext } from 'react'
 import logo from '../img/nerakk.png'
 import Modal from './Modal'
 import Toast from './Toast'
+import {StoreContext} from './index'
 
 const BarraLateral = () => {
-    const [state, setState] = useState({
-        pistaActual: '',
-        listaMusica: {
-            home: new Set(),
-            favoritos: new Set()
-        },
+    const [barraLateralState, setState] = useState({
+        modal: false,
         toast: ''
     })
 
-    const listaMusica = Object.keys(state.listaMusica)
+    const {state, dispatch} = useContext(StoreContext)
+
+    const listaMusica = Object.keys(state.listasMusica)
     const listaReferencia = useRef(null)
 
     const añadirListaMusica = e => {
         e.preventDefault()
         const list = listaReferencia.current.value
 
+        dispatch({type: 'añadirListaMusica', listaMusica: list})
+
         setState({
-            ...state,
+            ...barraLateralState,
             modal: false,
-            listaMusica: { ...state.listaMusica, [list]: new Set() },
             toast: 'Tu lista ha sido creada con éxito!'
         })
     }
+
+    const handleModal = () => setState({...barraLateralState, modal: !barraLateralState.modal})
 
     return (
         <ul className="BarraLateral">
@@ -37,19 +39,17 @@ const BarraLateral = () => {
             {listaMusica.map(lista => (
                 <li
                     key={lista}
-                    className={lista === state.pistaActual ? 'active' : ''}
+                    className={lista === state.pistaActual ? 'activo' : ''}
                     onClick={() => {
-                        setState({ ...state, pistaActual: lista })
+                        dispatch({type: 'seleccionarListaMusica', listaMusica: lista})
                     }}>
                     {lista}
                 </li>
             ))}
 
             <Modal
-                show={state.modal}
-                close={() => {
-                    setState({ ...state, modal: false })
-                }}>
+                show={barraLateralState.modal}
+                close={handleModal}>
                 <form onSubmit={añadirListaMusica}>
                     <div className="titulo">Crea tu nueva lista</div>
 
@@ -66,16 +66,14 @@ const BarraLateral = () => {
                 </form>
             </Modal>
 
-            <Toast toast={state.toast} close={() => {
-                setState({ ...state, toast: '' })
+            <Toast toast={barraLateralState.toast} close={() => {
+                setState({ ...barraLateralState, toast: '' })
             }}>
             </Toast>
 
             <li className="crearLista"
-                onClick={() => {
-                    setState({ ...state, modal: true })
-                }}
-            >Crear Lista
+                onClick={handleModal}>
+                Crear Lista
             </li>
 
         </ul>
