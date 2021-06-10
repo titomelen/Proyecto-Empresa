@@ -39,7 +39,7 @@ const BarraLateral = () => {
             {listaMusica.map(lista => (
                 <li
                     key={lista}
-                    className={lista === state.pistaActual ? 'activo' : ''}
+                    className={lista === state.actualListaMusica ? 'activo' : ''}
                     onClick={() => {
                         dispatch({type: 'seleccionarListaMusica', listaMusica: lista})
                     }}>

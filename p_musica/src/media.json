@@ -4,11 +4,6 @@
     "artista": "Don Omar",
     "duracion": "3:19"
   },
-  "kuduro": {
-    "titulo": "A New Orleans Crawfish Boil",
-    "artista": "Unicorn Heads",
-    "duracion": "7:39"
-  },
   "0da1827a-4097-4fd9-9e7d-bd074402eaf8": {
     "titulo": "Acid",
     "artista": "Jeremy Black",
@@ -151,7 +146,6 @@
   },
   "ids": [
     "c8ef0367-e991-4d95-b80c-366a7c1302ea",
-    "kuduro",
     "0da1827a-4097-4fd9-9e7d-bd074402eaf8",
     "6253424c-bdb5-4b36-b479-a628ec3dcac5",
     "3e19fdc7-ce3b-4487-83a8-1e7510dd4ee6",

@@ -118,6 +118,7 @@ button {
   width: 100%;
   height: 100%;
   display: flex;
+  position: relative;
   color: white;
 }
 
@@ -166,7 +167,10 @@ li.activo{
   height: 75px;
   background-color: black;
   z-index: 99;
-  padding: 20px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .conteni{
@@ -310,3 +314,49 @@ input {
 i{
   cursor: pointer;
 }
+
+
+.left {
+  width: 200px;
+}
+.artist {
+    font-size: 14px;
+    color: '#999999';
+    margin-top: 5px;
+  }
+.middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+.fa-play,
+  .fa-pause {
+    font-size: 14px;
+  }
+.play-pause-circle {
+    width: 35px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+.progress-container {
+    width: 600px;
+    height: 5px;
+    position: relative;
+    background-color: #4f4f4f;
+    margin-top: 10px;
+    display: inline-flex;
+    margin: 10px 10px 0px 10px;
+  }
+.bar {
+    height: 100%;
+    background-color: rgb(167 167 167);
+  }
+.fa-volume-up,
+      .fa-volume-off {
+    font-size: 20px;
+  }
