@@ -27,6 +27,8 @@ const BarraMusica = () => {
   if (!cancion) {
     return <div className="musica"/>
   }
+  
+
 
   const playOrPause = () =>
     state.reproduccion ? dispatch({ type: 'pausa' }) : dispatch({ type: 'play' })
