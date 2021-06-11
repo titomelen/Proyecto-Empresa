@@ -19,3 +19,7 @@ Al iniciar la página nos saldrá lo siguiente:
 
 
 ## Documentación YAML
+[Link](https://github.com/titomelen/Proyecto-Empresa/blob/main/Documentacion_YAML_Nerakk.yaml)
+
+## Documentación Postman
+[Link](https://github.com/titomelen/Proyecto-Empresa/blob/main/Documentacion_Postman_Nerakk.json)
