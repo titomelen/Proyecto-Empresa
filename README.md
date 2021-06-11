@@ -1,5 +1,11 @@
 # Proyecto-Empresa
 
+## Documentación YAML
+[Link](https://github.com/titomelen/Proyecto-Empresa/blob/main/Documentacion_YAML_Nerakk.yaml)
+
+## Documentación Postman
+[Link](https://github.com/titomelen/Proyecto-Empresa/blob/main/Documentacion_Postman_Nerakk.json)
+
 Para que funcione correctamente tienes que:
 - Hacer un **git-clone** a la rama "**main**".
 - Luego usar "**npm i**" para instalar el **node_modules**
@@ -16,10 +22,3 @@ Al iniciar la página nos saldrá lo siguiente:
 ## Página principal
 
 ![image](https://user-images.githubusercontent.com/56442515/121731163-ddf95980-caf0-11eb-95b5-fb2dd0c8ad3b.png)
-
-
-## Documentación YAML
-[Link](https://github.com/titomelen/Proyecto-Empresa/blob/main/Documentacion_YAML_Nerakk.yaml)
-
-## Documentación Postman
-[Link](https://github.com/titomelen/Proyecto-Empresa/blob/main/Documentacion_Postman_Nerakk.json)
