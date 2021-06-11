@@ -1,0 +1,89 @@
+---
+info:
+  _postman_id: 9ffb819c-5e8a-48e5-8a11-34e98c9e83ea
+  name: pruebasNerakk
+  schema: https://schema.getpostman.com/json/collection/v2.1.0/collection.json
+item:
+- name: añadir a favoritos
+  request:
+    method: GET
+    header: []
+    url:
+      raw: https://proyecto-empresa-nerakk.herokuapp.com/
+      protocol: https
+      host:
+      - proyecto-empresa-nerakk
+      - herokuapp
+      - com
+      path:
+      - ''
+  response: []
+- name: añadir cuenta correos
+  request:
+    method: PUT
+    header: []
+    url:
+      raw: https://console.firebase.google.com/u/0/project/proyectomusica-melen/authentication/users?hl=es
+      protocol: https
+      host:
+      - console
+      - firebase
+      - google
+      - com
+      path:
+      - u
+      - '0'
+      - project
+      - proyectomusica-melen
+      - authentication
+      - users
+      query:
+      - key: hl
+        value: es
+  response: []
+- name: recoger cuentas correos
+  request:
+    method: GET
+    header: []
+    url:
+      raw: https://console.firebase.google.com/u/0/project/proyectomusica-melen/authentication/users?hl=es
+      protocol: https
+      host:
+      - console
+      - firebase
+      - google
+      - com
+      path:
+      - u
+      - '0'
+      - project
+      - proyectomusica-melen
+      - authentication
+      - users
+      query:
+      - key: hl
+        value: es
+  response: []
+- name: borrar cuenta correos
+  request:
+    method: DELETE
+    header: []
+    url:
+      raw: https://console.firebase.google.com/u/0/project/proyectomusica-melen/authentication/users?hl=es
+      protocol: https
+      host:
+      - console
+      - firebase
+      - google
+      - com
+      path:
+      - u
+      - '0'
+      - project
+      - proyectomusica-melen
+      - authentication
+      - users
+      query:
+      - key: hl
+        value: es
+  response: []
