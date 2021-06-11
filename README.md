@@ -1,4 +1,8 @@
 # Proyecto-Empresa
+Para que funcione correctamente tienes que hacer un git-clone a la rama "main".
+Luego usar "npm i" para instalar el node_modules
+Y para finalizar y que se ejecute nuestra página, usamos "npm start"
+
 
 ## Página principal
 
